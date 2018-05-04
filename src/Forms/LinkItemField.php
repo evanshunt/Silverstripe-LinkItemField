@@ -1,8 +1,8 @@
 <?php
 
-namespace CyberDuck\LinkItemField\Forms;
+namespace evanshunt\LinkItemField\Forms;
 
-use CyberDuck\LinkItemField\Model\LinkItem;
+use evanshunt\LinkItemField\Model\LinkItem;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Control\Controller;
@@ -200,7 +200,7 @@ class LinkItemField extends FormField
      * @since version 4.0.0
      *
      * @var int $id
-     * @return CyberDuck\LinkItemField\Model\LinkItem
+     * @return evanshunt\LinkItemField\Model\LinkItem
      **/
     private function getLinkObject($id)
     {

@@ -41,8 +41,8 @@ The field references a has_one LinkItem relation on a DataObject. Make sure to i
 
 ```php
 
-use CyberDuck\LinkItemField\Forms\LinkItemField;
-use CyberDuck\LinkItemField\Model\LinkItem;
+use evanshunt\LinkItemField\Forms\LinkItemField;
+use evanshunt\LinkItemField\Model\LinkItem;
 use SilverStripe\ORM\DataObject;
 
 class MyObject extends DataObject 

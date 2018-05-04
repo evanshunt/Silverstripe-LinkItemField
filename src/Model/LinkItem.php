@@ -1,6 +1,6 @@
 <?php
 
-namespace CyberDuck\LinkItemField\Model;
+namespace evanshunt\LinkItemField\Model;
 
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Assets\File;
