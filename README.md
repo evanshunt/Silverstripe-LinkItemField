@@ -1,11 +1,6 @@
 # SilverStripe 4 Link Item Field
 
-[![Latest Stable Version](https://poser.pugx.org/cyber-duck/silverstripe-linkitemfield/v/stable)](https://packagist.org/packages/cyber-duck/silverstripe-linkitemfield)
-[![Latest Unstable Version](https://poser.pugx.org/cyber-duck/silverstripe-linkitemfield/v/unstable)](https://packagist.org/packages/cyber-duck/linkitemfield)
-[![Total Downloads](https://poser.pugx.org/cyber-duck/silverstripe-linkitemfield/downloads)](https://packagist.org/packages/cyber-duck/silverstripe-linkitemfield)
-[![License](https://poser.pugx.org/cyber-duck/silverstripe-linkitemfield/license)](https://packagist.org/packages/cyber-duck/silverstripe-linkitemfield)
-
-Author: [Andrew Mc Cormack](https://github.com/Andrew-Mc-Cormack)
+Original Author: [Andrew Mc Cormack](https://github.com/Andrew-Mc-Cormack)
 
 ## Features
 
@@ -30,7 +25,7 @@ Add the following to your composer.json file and run /dev/buid?flush=all
 ```json
 {  
     "require": {  
-        "cyber-duck/silverstripe-linkitemfield": "4.0.*"
+        "evanshunt/silverstripe-linkitemfield": "4.0.*"
     }
 }
 ```

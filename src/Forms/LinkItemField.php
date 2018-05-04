@@ -26,8 +26,7 @@ use SilverStripe\View\SSViewer;
  * Link Item Form element class
  *
  * @package silverstripe-linkitemfield
- * @license MIT License https://github.com/cyber-duck/silverstripe-linkitemfield/blob/master/LICENSE
- * @author  <andrewm@cyber-duck.co.uk>
+ * @license MIT License https://github.com/evanshunt/silverstripe-linkitemfield/blob/master/LICENSE
  **/
 class LinkItemField extends FormField
 {

@@ -14,8 +14,7 @@ use SilverStripe\ORM\DataObject;
  * Link Item object class for use as $has_one relation
  *
  * @package silverstripe-linkitemfield
- * @license MIT License https://github.com/cyber-duck/silverstripe-linkitemfield/blob/master/LICENSE
- * @author  <andrewm@cyber-duck.co.uk>
+ * @license MIT License https://github.com/evanshunt/silverstripe-linkitemfield/blob/master/LICENSE
  **/
 class LinkItem extends DataObject 
 {

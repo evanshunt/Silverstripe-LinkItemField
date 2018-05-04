@@ -1,6 +1,6 @@
 # License
 
-    Copyright (c) 2016, Andrew Mc Cormack <andrewm@cyber-duck.co.uk>.
+    Copyright (c) 2018, Evans Hunt
     All rights reserved.
 
     Redistribution and use in source and binary forms, with or without

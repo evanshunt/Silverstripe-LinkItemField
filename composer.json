@@ -10,13 +10,6 @@
         "custom link field"
     ],
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Andrew Mc Cormack",
-            "email": "andrewm@cyber-duck.co.uk",
-            "homepage": "https://github.com/Andrew-Mc-Cormack"
-        }
-    ],
     "support": {
         "issues": "http://github.com/evanshunt/silverstripe-linkitemfield/issues"
     },
