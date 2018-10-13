@@ -8,6 +8,7 @@ use SilverStripe\Assets\Image;
 use SilverStripe\Forms\RequiredFields;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Versioned\Versioned;
+use SilverStripe\Security\Permission;
 
 /**
  * LinkItem
@@ -19,6 +20,18 @@ use SilverStripe\Versioned\Versioned;
  **/
 class LinkItem extends DataObject
 {
+
+    /**
+     * Allow non-authenticated users access to view.
+     *
+     * @param [object] $member
+     * @return boolean
+     */
+    public function canView($member = null)
+    {
+        return true;
+    }
+
     /**
      * db field config
      *
@@ -89,7 +102,7 @@ class LinkItem extends DataObject
      * @var array $extensions
      */
     private static $extensions = [
-        Versioned::class . '.versioned'
+        Versioned::class;
     ];
 
     /**
