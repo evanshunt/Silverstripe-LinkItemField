@@ -102,7 +102,7 @@ class LinkItem extends DataObject
      * @var array $extensions
      */
     private static $extensions = [
-        Versioned::class;
+        Versioned::class
     ];
 
     /**
