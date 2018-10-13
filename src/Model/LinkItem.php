@@ -7,6 +7,7 @@ use SilverStripe\Assets\File;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\RequiredFields;
 use SilverStripe\ORM\DataObject;
+use SilverStripe\Versioned\Versioned;
 
 /**
  * LinkItem
@@ -16,11 +17,11 @@ use SilverStripe\ORM\DataObject;
  * @package silverstripe-linkitemfield
  * @license MIT License https://github.com/evanshunt/silverstripe-linkitemfield/blob/master/LICENSE
  **/
-class LinkItem extends DataObject 
+class LinkItem extends DataObject
 {
     /**
      * db field config
-     * 
+     *
      * @since version 4.0.0
      *
      * @var array $db
@@ -38,7 +39,7 @@ class LinkItem extends DataObject
 
     /**
      * has_one relation config
-     * 
+     *
      * @since version 4.0.0
      *
      * @var array $has_one
@@ -49,14 +50,51 @@ class LinkItem extends DataObject
         'InternalLink' => SiteTree::class
     ];
 
+    /**
+     * Associate with other objects.
+     *
+     * @var array $owns
+     */
     private static $owns = [
         'File',
-        'Image'
+        'Image',
+        'InternalLink'
     ];
-    
+
+    /**
+     * Cascade deletions to related objects.
+     *
+     * @var array $cascade_deletes
+     */
+    private static $cascade_deletes = [
+        'File',
+        'Image',
+        'InternalLink'
+    ];
+
+    /**
+     * Cascade duplications to related objects.
+     *
+     * @var array $cascade_duplicates
+     */
+    private static $cascade_duplicates = [
+        'File',
+        'Image',
+        'InternalLink'
+    ];
+
+    /**
+     * Disable stage for LinkItem objects.
+     *
+     * @var array $extensions
+     */
+    private static $extensions = [
+        Versioned::class . '.versioned'
+    ];
+
     /**
      * summary_fields grid field config
-     * 
+     *
      * @since version 4.0.0
      *
      * @var array $summary_fields
@@ -65,46 +103,46 @@ class LinkItem extends DataObject
         'Title' => 'Title',
         'Link'  => 'Link'
     ];
-    
+
     /**
      * table_name db table name
-     * 
+     *
      * @since version 4.0.0
      *
      * @var array $table_name
      **/
     private static $table_name = 'LinkItem';
-    
+
     /**
      * default_sort db table default sorting columns
-     * 
+     *
      * @since version 4.0.0
      *
      * @var array $default_sort
      **/
     private static $default_sort = 'SortOrder';
-    
+
     /**
      * singular_name Object singular name
-     * 
+     *
      * @since version 4.0.0
      *
      * @var array $singular_name
      **/
     private static $singular_name = 'Link Item';
-    
+
     /**
      * plural_name Object plural name
-     * 
+     *
      * @since version 4.0.0
      *
      * @var array $plural_name
      **/
     private static $plural_name = 'Link Items';
-    
+
     /**
      * Returns the object CMS fields
-     * 
+     *
      * @since version 4.0.0
      *
      * @return SilverStripe\Forms\FieldList
@@ -113,10 +151,10 @@ class LinkItem extends DataObject
     {
         return parent::getCMSFields();
     }
-    
+
     /**
      * Returns the object CMS fields validator
-     * 
+     *
      * @since version 4.0.0
      *
      * @return SilverStripe\Forms\RequiredFields
@@ -128,10 +166,10 @@ class LinkItem extends DataObject
             'LinkType'
         ]);
     }
-    
+
     /**
      * Returns the formatted URL
-     * 
+     *
      * @since version 4.0.0
      *
      * @return array
@@ -165,10 +203,10 @@ class LinkItem extends DataObject
         $this->extend('updateLink', $link);
         return $link;
     }
-    
+
     /**
      * Returns an array of Link types.
-     * 
+     *
      * @since version 4.0.0
      *
      * @return array
@@ -187,10 +225,10 @@ class LinkItem extends DataObject
         $this->extend('updateMenuItems', $items);
         return $items;
     }
-    
+
     /**
      * Returns an array of Link targets.
-     * 
+     *
      * @since version 4.0.0
      *
      * @return array
