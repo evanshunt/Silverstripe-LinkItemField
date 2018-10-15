@@ -70,8 +70,7 @@ class LinkItem extends DataObject
      */
     private static $owns = [
         'File',
-        'Image',
-        'InternalLink'
+        'Image'
     ];
 
     /**
@@ -81,8 +80,7 @@ class LinkItem extends DataObject
      */
     private static $cascade_deletes = [
         'File',
-        'Image',
-        'InternalLink'
+        'Image'
     ];
 
     /**
@@ -92,8 +90,7 @@ class LinkItem extends DataObject
      */
     private static $cascade_duplicates = [
         'File',
-        'Image',
-        'InternalLink'
+        'Image'
     ];
 
     /**
