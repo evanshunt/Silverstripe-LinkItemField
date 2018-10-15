@@ -44,6 +44,7 @@ class LinkItem extends DataObject
         'LinkType'     => 'Varchar(20)',
         'Target'       => 'Varchar(512)',
         'Anchor'       => 'Varchar(512)',
+        'InternalLink' => SiteTree::class,
         'ExternalLink' => 'Varchar(512)',
         'Email'        => 'Varchar(512)',
         'Telephone'    => 'Varchar(512)',
@@ -59,8 +60,7 @@ class LinkItem extends DataObject
      **/
     private static $has_one = [
         'File'         => File::class,
-        'Image'        => Image::class,
-        'InternalLink' => SiteTree::class
+        'Image'        => Image::class
     ];
 
     /**
@@ -70,8 +70,7 @@ class LinkItem extends DataObject
      */
     private static $owns = [
         'File',
-        'Image',
-        'InternalLink'
+        'Image'
     ];
 
     /**
@@ -81,8 +80,7 @@ class LinkItem extends DataObject
      */
     private static $cascade_deletes = [
         'File',
-        'Image',
-        'InternalLink'
+        'Image'
     ];
 
     /**
@@ -92,8 +90,7 @@ class LinkItem extends DataObject
      */
     private static $cascade_duplicates = [
         'File',
-        'Image',
-        'InternalLink'
+        'Image'
     ];
 
     /**
